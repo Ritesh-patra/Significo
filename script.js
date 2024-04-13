@@ -175,6 +175,26 @@ function backgroundColorCahngeAnimation() {
     })
 }
 
+
+document.querySelectorAll(".section").forEach(function (e){
+    ScrollTrigger.create({
+        trigger: e,
+        start: "top 50%",
+        end: "bottom 50%",
+        scrub: 1,
+        // markers:true,
+        onEnter: function (){
+           var fevi = document.querySelector(".fevi");
+            fevi.setAttribute("href", e.dataset.fevicon);
+        },
+        onEnterBack: function (){
+            var fevi = document.querySelector(".fevi");
+            fevi.setAttribute("href", e.dataset.fevicon);
+        }
+    })
+})
+
+
 function navHoverAnimation() {
     document.querySelectorAll(".nav2 h2")
 .forEach(function (e) {
